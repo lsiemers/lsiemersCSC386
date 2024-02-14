@@ -38,13 +38,13 @@ func main() {
 			}
 
 		case "mkdir": //If user input is the same as the string
-			var mkdirName string
+			var mkdirName string	// To create the user directory
 			fmt.Printf("Please enter a directory name:") // Printing Prompt
-			if _, err := fmt.Scanln(&mkdirName); err != nil {
+			if _, err := fmt.Scanln(&mkdirName); err != nil {	//scanning in user defined name
 				fmt.Println("Error reading input:", err)
 				continue
 			}
-			out, err := exec.Command("mkdir" + mkdirName).Output()
+			out, err := exec.Command("mkdir " + mkdirName).Output()	//Creating directory with user defined name
 			if err != nil { //Error Handling
 				fmt.Println("Error:", err) //Print Statement
 			} else {
