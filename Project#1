@@ -6,13 +6,13 @@ package main
 import (
 	"fmt"     //Imports
 	"os"      //''
-	"os/exec" //''
+	"os/exec" //''	
 )
 
 func main() {
 	var inputcommand string
 	fmt.Printf("Please enter a command:") // Printing Prompt
-	fmt.Scan(&inputcommand)               // Taking User-Input
+	fmt.Scan(inputcommand)               // Taking User-Input
 
 	if inputcommand == "ls" { //If user input is the same as the string
 		cmd := exec.Command("ls") //Assigning command to cmd
