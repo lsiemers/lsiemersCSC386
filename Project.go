@@ -38,7 +38,13 @@ func main() {
 			}
 
 		case "mkdir": //If user input is the same as the string
-			out, err := exec.Command("mkdir").Output()
+			var mkdirName string
+			fmt.Printf("Please enter a directory name:") // Printing Prompt
+			if _, err := fmt.Scanln(&mkdirName); err != nil {
+				fmt.Println("Error reading input:", err)
+				continue
+			}
+			out, err := exec.Command("mkdir" + mkdirName).Output()
 			if err != nil { //Error Handling
 				fmt.Println("Error:", err) //Print Statement
 			} else {
