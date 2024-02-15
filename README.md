@@ -1,4 +1,5 @@
 # lsiemersCSC386
 
 Lukas Siemers
-CSC 386 Programming Projects Folder
+
+1. Navigate in the shell, clone the repo and type "go run Project.go"
