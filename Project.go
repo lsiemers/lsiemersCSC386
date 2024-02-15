@@ -41,7 +41,7 @@ func main() {
 				fmt.Println("Error reading input:", err)
 				continue
 			}
-			out, err := exec.Command("mkdir " + mkdirName).Output()	//Creating directory with user defined name (problems with the Path)
+			out, err := exec.Command("mkdir /home/UNIV.MISSOURIWESTERN.EDU/lsiemers" + mkdirName).Output()	//Creating directory with user defined name (problems with the Path)
 			if err != nil { //Error Handling
 				fmt.Println("Error:", err) //Print Statement
 			} else {
