@@ -1,15 +1,15 @@
 package main
-
+//Imports
 import (
-	"fmt"
+	"fmt"		
 	"os"
 	"os/exec"
 )
 func main() {
 	for {
 		var inputcommand string
-		fmt.Printf("You can use ls, wc, mkdir, cp, mv,whoami, or exit to leave the Program")
-		fmt.Printf("Please enter a command:") // Printing Prompt
+		fmt.Printf("You can use ls, wc, mkdir, cp, mv, whoami or exit to leave the Program")	//Printing Explanantion
+		fmt.Printf("\nPlease enter a command:") // Printing Prompt
 		if _, err := fmt.Scanln(&inputcommand); err != nil {	//Scanning in user input
 			fmt.Println("Error reading input:", err)	
 			continue
